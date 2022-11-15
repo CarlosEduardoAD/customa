@@ -1,7 +1,6 @@
 import { HomeContactHelper } from "../components/Home/HomeContactHelper";
 import { HomeImageHelper } from "../components/Home/HomeImageHelper";
 import { HomePresentationHelper } from "../components/Home/HomePresentationHelper";
-import { Footer } from "../components/Footer";
 
 export function Home() {
   return (
@@ -16,7 +15,7 @@ export function Home() {
         <div className="flex flex-col items-center justify-center">
           <p className="text-2xl mb-2 font-semibold">Krona</p>
           <small className="text-center pl-12 pr-12 sm:pl-2 sm:pr-2">
-            Quando o assunto é gerenciar clientes, foi provavelmente a melhor
+            Quando o assunto é gerenciar clientes, foi provavelmente <br /> a melhor
             solução que usamos até hoje.
           </small>
         </div>
@@ -38,7 +37,6 @@ export function Home() {
       </section>
       <HomePresentationHelper></HomePresentationHelper>
       <HomeContactHelper></HomeContactHelper>
-      <Footer></Footer>
     </div>
   );
 }
