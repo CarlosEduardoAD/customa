@@ -15,7 +15,6 @@ import { AtualizacaoClientesModal } from "../AtualizacaoClientes/AtualizacaoClie
 
 export function TableHelper() {
   const [rows, setRows] = useState<any[]>([]);
-  const [cities, setCity] = useState<any[]>([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -25,7 +24,7 @@ export function TableHelper() {
       });
     };
     getData();
-  }, [rows]);
+  }, []);
 
   const deleteCustomer = (userEmail: string) => {
     axios.delete("http://localhost:3000/api/v1/deleteUsers", {

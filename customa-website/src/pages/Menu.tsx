@@ -3,9 +3,23 @@ import { Button } from "../utils/Button";
 import { PlusCircle, MagnifyingGlass } from "phosphor-react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { CadastroClientesModal } from "../components/CadastroClientes/CadastroClientesModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export function Menu() {
+  const [records, setRecords] = useState()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const sessionPass = sessionStorage.getItem('senha')
+    if (!sessionPass){
+      navigate('/cadastro')
+    }
+    axios.get("http://localhost:3000/api/v1/countTable").then((res) => {
+      setRecords(JSON.parse(res.data.numberOfRecords))
+    })
+  }, []);
 
   return (
     <div className="">
@@ -28,7 +42,7 @@ export function Menu() {
           <div className="lg:ml-12">
             <div className="sm:flex items-center justify-center">
               <input
-                className="ml-36 sm:p-1 p-2 lg:w-[240px] w-[270px] sm:ml-48 mt-2 border-2 bg-[#F2F2F2] sm:indent-8 rounded-lg font-raleway text-sm"
+                className="bg-glass bg-no-repeat bg-[center_left_0.35rem] ml-36 sm:p-1 p-2 lg:w-[240px] w-[270px] sm:ml-48 mt-2 border-2 bg-[#F2F2F2] sm:indent-8 rounded-lg font-raleway text-sm"
                 type="email"
                 placeholder="Pesquisar..."
               />
@@ -37,7 +51,7 @@ export function Menu() {
           <div className="">
             <p className="text-[#666D73] ml-40 mt-3 font-raleway font-semibold sm:block hidden">
               {" "}
-              23 Registros{" "}
+              Registros: {records}{" "}
             </p>
           </div>
         </div>

@@ -11,7 +11,8 @@ module.exports = {
           "email" : "url('./src/assets/at.svg')",
           "nome" : "url('./src/assets/typo.svg')",
           "cnpj" : "url('./src/assets/card-id.svg')",
-          "rect" : "url('./src/assets/rect.svg')"
+          "rect" : "url('./src/assets/rect.svg')",
+          "glass" : "url('./src/assets/glass.svg')"
       }
     },
   },

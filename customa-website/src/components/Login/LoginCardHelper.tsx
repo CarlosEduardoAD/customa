@@ -37,9 +37,9 @@ export function LoginCardHelper() {
         <div className="sm:p-20 p-16 sm:mx-0 bg-white rounded-lg shadow-xl shadow-violet-400 my-12">
           <p className="flex sm:-mt-16 -mt-8 font-raleway font-bold lg:text-3xl sm:text-xl text-lg text-start mb-1">
             <i>
-              <ArrowSquareOut size={32} color={"#7F23F7"} />
+              <ArrowSquareOut className='mt-3' size={32} color={"#7F23F7"} />
             </i>
-            <span className="ml-2">Entrar</span>
+            <span className="ml-2 mt-3">Entrar</span>
           </p>
           <span>
             <svg
@@ -60,7 +60,7 @@ export function LoginCardHelper() {
               />
             </svg>
           </span>
-          <div className="flex flex-col mt-8 font-raleway ">
+          <div className="flex flex-col mt-4 font-raleway ">
             <label className="mt-4 font-semibold">E-mail</label>
             <input
               className="bg-email bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8] indent-8 p-1"

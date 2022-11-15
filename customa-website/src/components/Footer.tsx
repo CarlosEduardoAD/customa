@@ -9,7 +9,7 @@ export function Footer() {
         <p className="text-sm">Nossos valores</p>
         <p className="text-sm">Conglomerado Unite</p>
       </div>
-      <div className="hidden lg:text-sm lg:text-center lg:ml-24 ml-48 pr-4">
+      <div className=" lg:text-sm lg:text-center lg:ml-24 ml-48 pr-4">
         <p>&#169; Direitos reservados</p>
       </div>
     </div>

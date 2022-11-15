@@ -7,7 +7,12 @@ import axios from 'axios'
 
 export const routes = express.Router()
 
-routes.get('/api/v1/')
+routes.get('/api/v1/countTable', async(req, res) => {
+    const customerObj = new SelectCustomer()
+    const totalRecords = await customerObj.getTotalRecords()
+    console.log(totalRecords)
+    res.json({numberOfRecords : totalRecords})
+})
 
 routes.get('/api/v1/users', async (req, res) => {
     const customerObj = new SelectCustomer()

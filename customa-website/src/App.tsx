@@ -16,6 +16,9 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />}></Route>
         <Route path="/menu" element={<Menu></Menu>} />
       </Routes>{" "}
+      <div className="hidden lg:block">
+        <Footer></Footer>
+      </div>
     </main>
   );
 }

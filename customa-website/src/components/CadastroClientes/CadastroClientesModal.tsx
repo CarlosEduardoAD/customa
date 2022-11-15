@@ -140,7 +140,7 @@ export function CadastroClientesModal() {
             <input
               className="bg-phone bg-no-repeat bg-[center_left_0.35rem] border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-1"
               type="text"
-              {...register("telefone", { required: true })}
+              {...register("telefone", { required: true, minLength : 11, maxLength: 11})}
             />
             <div className="flex mt-4">
             <label className="text-center font-semibold">CNPJ</label>
@@ -151,7 +151,7 @@ export function CadastroClientesModal() {
             )}
             </div>
             <input
-              className="bg-cnpj bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-1"
+              className="bg-cnpj bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-1 "
               type="text"
               {...register("cnpj", {
                 required: true,
@@ -162,14 +162,14 @@ export function CadastroClientesModal() {
             <label className="text-center font-semibold">Endereço</label>
             {errors.endereco && (
               <span>
-                <small className="ml-2">Endereço cliente</small>
+                <small className="ml-2">Endereço inválido</small>
               </span>
             )}
             </div>
             <input
               className="bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-1"
               type="text"
-              {...register("endereco", { required: true })}
+              {...register("endereco", { required: true})}
             />
             <div className="flex mt-4">
             <label className="text-center font-semibold">CEP</label>
@@ -182,7 +182,8 @@ export function CadastroClientesModal() {
             <input
               className="mt-1 border-[1.4px] rounded-sm  indent-5 bg-[#E8E8E8] p-1"
               type="text"
-              {...register("cep", { required: true })}
+              placeholder="Digite sem o traço"
+              {...register("cep", { required: true, minLength : 8 })}
             />
           </div>
           <div className="flex items-center justify-center mt-2 p-4 bg-[#7F23F7] rounded-md text-lg font-raleway font-bold text-white">

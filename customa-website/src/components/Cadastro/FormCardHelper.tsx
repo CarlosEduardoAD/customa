@@ -37,8 +37,8 @@ export function FormCardHelper() {
       <form onSubmit={handleSubmit(createUser)}>
         <div className="sm:p-20 p-16 sm:mx-0 bg-white rounded-lg shadow-lg shadow-violet-400 my-12">
           <p className="flex sm:-mt-16 -mt-8 font-raleway font-bold lg:text-3xl sm:text-xl text-lg text-start mb-1">
-            <ArrowSquareOut size={32} color={"#7F23F7"} />
-            <span className="ml-2">Cadastre-se</span>
+            <ArrowSquareOut className='mt-3' size={32} color={"#7F23F7"} />
+            <span className="ml-2 mt-3">Cadastre-se</span>
           </p>
           <span>
             <svg
@@ -60,7 +60,7 @@ export function FormCardHelper() {
             </svg>
           </span>
 
-          <div className="flex flex-col mt-8 font-raleway ">
+          <div className="flex flex-col mt-4 font-raleway ">
             <label className="mt-4 font-semibold">Nome</label>
             <input
               defaultValue={""}
