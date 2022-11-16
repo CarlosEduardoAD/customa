@@ -16,6 +16,8 @@ import { AtualizacaoClientesModal } from "../AtualizacaoClientes/AtualizacaoClie
 export function TableHelper() {
   const [rows, setRows] = useState<any[]>([]);
 
+
+
   useEffect(() => {
     const getData = async () => {
       await axios.get("http://localhost:3000/api/v1/users").then((res) => {
@@ -34,7 +36,7 @@ export function TableHelper() {
 
   return (
     <div className="flex items-center justify-center mt-8 mb-8 mx-12">
-      <div className="overflow-x-scroll border-2 rounded-lg py-">
+      <div className="overflow-scroll border-2 rounded-lg">
         <table className="table text-sm rounded-lg py-12 font-raleway text-[#363E40]">
           <thead>
             <tr className="border-b-2">

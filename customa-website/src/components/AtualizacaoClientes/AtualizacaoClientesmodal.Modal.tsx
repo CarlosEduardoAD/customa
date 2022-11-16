@@ -62,7 +62,7 @@ export function AtualizacaoClientesModal({ userEmail = "" }) {
             <i>
               <ArrowSquareOut size={32} color={"#7F23F7"} />
             </i>
-            <span className="ml-2">Novo Cliente</span>
+            <span className="ml-2">Atualizar Cliente</span>
           </p>
           <span className="hidden sm:block">
             <svg
@@ -112,8 +112,9 @@ export function AtualizacaoClientesModal({ userEmail = "" }) {
               )}
             </div>
             <input
-              className="bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm sm:w-[430px] bg-[#E8E8E8] indent-5 p-2"
+              className="bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] border-[#d0cfcf] rounded-sm sm:w-[430px] bg-[#E8E8E8] indent-5 p-2"
               type="text"
+              placeholder="Digite o novo nome"
               {...register("nomeCliente", { required: true })}
             />
             <div className="flex mt-4">
@@ -125,8 +126,9 @@ export function AtualizacaoClientesModal({ userEmail = "" }) {
               )}
             </div>
             <input
-              className="bg-phone bg-no-repeat bg-[center_left_0.35rem] border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-2"
+              className="bg-phone bg-no-repeat bg-[center_left_0.35rem] border-[1.4px] border-[#d0cfcf] rounded-sm indent-5 bg-[#E8E8E8] p-2"
               type="text"
+              placeholder="Digite o novo telefone"
               {...register("telefone", { required: true })}
             />
             <div className="flex mt-4">
@@ -138,8 +140,9 @@ export function AtualizacaoClientesModal({ userEmail = "" }) {
               )}
             </div>
             <input
-              className="bg-cnpj bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-2"
+              className="bg-cnpj bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] border-[#d0cfcf] rounded-sm indent-5 bg-[#E8E8E8] p-2"
               type="text"
+              placeholder="Digite o novo CNPJ"
               {...register("cnpj", {
                 required: true,
                 pattern: /\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/,
@@ -149,13 +152,14 @@ export function AtualizacaoClientesModal({ userEmail = "" }) {
               <label className="text-center font-semibold">Endereço</label>
               {errors.endereco && (
                 <span>
-                  <small className="ml-2">Endereço cliente</small>
+                  <small className="ml-2">Endereço inválido</small>
                 </span>
               )}
             </div>
             <input
-              className="bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-2"
+              className="bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] border-[#d0cfcf] rounded-sm indent-5 bg-[#E8E8E8] p-2"
               type="text"
+              placeholder="Digite o novo endereço"
               {...register("endereco", { required: true })}
             />
             <div className="flex mt-4">
@@ -167,12 +171,13 @@ export function AtualizacaoClientesModal({ userEmail = "" }) {
               )}
             </div>
             <input
-              className="mt-1 border-[1.4px] rounded-sm  indent-5 bg-[#E8E8E8] p-2"
+              className="border-[#d0cfcf] mt-1 border-[1.4px] rounded-sm  indent-5 bg-[#E8E8E8] p-2"
               type="text"
+              placeholder="Digite o novo CEP"
               {...register("cep", { required: true })}
             />
           </div>
-          <div className="flex items-center justify-center mt-12 p-4 bg-[#7F23F7] rounded-md text-lg font-raleway font-bold text-white">
+          <div className="flex items-center justify-center mt-4 p-2 bg-[#7F23F7] rounded-md text-lg font-raleway font-bold text-white">
             <input type="submit" value="Atualizar cliente" />
           </div>
           <Dialog.Close>

@@ -65,7 +65,8 @@ export function FormCardHelper() {
             <input
               defaultValue={""}
               {...register("nomeUsuario", { required: true })}
-              className={`bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8] indent-8 p-1`}
+              className={`bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8] border-[#d0cfcf] indent-8 p-1`}
+              placeholder='Digite seu nome de usuário'
               type="text"
             />
             {errors.nomeUsuario && <span><small>Por favor, coloque seu nome</small></span>}
@@ -75,7 +76,8 @@ export function FormCardHelper() {
                 required: true,
                 pattern: /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i,
               })}
-              className="bg-email bg-no-repeat bg-[center_left_0.2rem] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8] indent-8 p-1"
+              placeholder='Digite seu email, ele precisa ser ter o domínio ".br"'
+              className=" border-[#d0cfcf] bg-email bg-no-repeat bg-[center_left_0.2rem] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8] indent-8 p-1"
               type="email"
             />
             {errors.email && <span><small>Por favor, coloque um e-mail válido</small></span>}
@@ -85,15 +87,17 @@ export function FormCardHelper() {
                 required: true,
                 pattern: /\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/,
               })}
-              className="bg-cnpj bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8] indent-8 p-1"
+              placeholder='Digite seu CNPJ com os respectivos pontos e traço'
+              className="border-[#d0cfcf] bg-cnpj bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8] indent-8 p-1"
               type="text"
             />
             {errors.cnpj && <span><small>Por favor, coloque um CNPJ válido</small></span>}
             <label className="mt-4 font-semibold">Senha</label>
             <input
               {...register("senha", { required: true, minLength: 8 })}
-              className="border-[1.4px] rounded-sm bg-[#E8E8E8] p-1"
+              className="border-[1.4px] border-[#d0cfcf] rounded-sm bg-[#E8E8E8] p-1"
               type={text ? "text" : "password"}
+              placeholder='Digite uma senha forte de no mínimo 8 caractéres'
             />
             {errors.senha && (
               <span>
@@ -115,8 +119,9 @@ export function FormCardHelper() {
             </span>
             <label className="mt-4 font-semibold">Confirmação da senha</label>
             <input
-              className="mt-1 border-[1.4px] rounded-sm  bg-[#E8E8E8] p-1"
+              className="border-[1.4px] border-[#d0cfcf] mt-1 rounded-sm  bg-[#E8E8E8] p-1"
               type={text ? "text" : "password"}
+              placeholder='Repita sua senha'
             />
             <span>
               <button
@@ -133,12 +138,12 @@ export function FormCardHelper() {
           </div>
           <div className="flex flex-col sm:grid grid-cols-2 grid-flow-col gap-4">
             <div>
-              <p className="font-raleway sm:text-lg text-sm font-semibold p-2 border-2  bg-[#E8E8E8] text-center rounded-md">
+              <p className=" border-[#d0cfcf] font-raleway sm:text-lg text-sm font-semibold p-2 border-2  bg-[#E8E8E8] text-center rounded-md">
                 Entrar com Google
               </p>
             </div>
             <div>
-              <p className="font-raleway sm:text-lg text-sm font-semibold p-2 border-2  bg-[#E8E8E8] text-center rounded-md">
+              <p className=" border-[#d0cfcf] font-raleway sm:text-lg text-sm font-semibold p-2 border-2  bg-[#E8E8E8] text-center rounded-md">
                 Esqueceu sua senha ?
               </p>
             </div>

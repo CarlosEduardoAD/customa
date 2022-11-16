@@ -109,8 +109,9 @@ export function CadastroClientesModal() {
               )}
             </div>
             <input
-              className="bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm sm:w-[430px] bg-[#E8E8E8] indent-5 p-1"
+              className="border-[1.4px] border-[#d0cfcf] bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 rounded-sm sm:w-[430px] bg-[#E8E8E8] indent-5 p-1"
               type="text"
+              placeholder="Digite o nome do cliente/empresa"
               {...register("nomeCliente", { required: true })}
             />
             <div className="flex mt-4">
@@ -122,8 +123,9 @@ export function CadastroClientesModal() {
               )}
             </div>
             <input
-              className="bg-email bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-1"
+              className="border-[1.4px] border-[#d0cfcf] bg-email bg-no-repeat bg-[center_left_0.35rem] mt-1 rounded-sm indent-5 bg-[#E8E8E8] p-1"
               type="email"
+              placeholder="Seu email precisa ter a terminação .br"
               {...register("email", {
                 required: true,
                 pattern: /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i,
@@ -138,8 +140,9 @@ export function CadastroClientesModal() {
             )}
             </div>
             <input
-              className="bg-phone bg-no-repeat bg-[center_left_0.35rem] border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-1"
+              className="border-[1.4px] border-[#d0cfcf] bg-phone bg-no-repeat bg-[center_left_0.35rem] rounded-sm indent-5 bg-[#E8E8E8] p-1"
               type="text"
+              placeholder="Apenas telefone válido no Brasil"
               {...register("telefone", { required: true, minLength : 11, maxLength: 11})}
             />
             <div className="flex mt-4">
@@ -151,8 +154,9 @@ export function CadastroClientesModal() {
             )}
             </div>
             <input
-              className="bg-cnpj bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-1 "
+              className="border-[1.4px] border-[#d0cfcf] bg-cnpj bg-no-repeat bg-[center_left_0.35rem] mt-1 rounded-sm indent-5 bg-[#E8E8E8] p-1 "
               type="text"
+              placeholder="Digite com os 3 pontos e o traço"
               {...register("cnpj", {
                 required: true,
                 pattern: /\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/,
@@ -167,8 +171,9 @@ export function CadastroClientesModal() {
             )}
             </div>
             <input
-              className="bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm indent-5 bg-[#E8E8E8] p-1"
+              className="border-[1.4px] border-[#d0cfcf] bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 rounded-sm indent-5 bg-[#E8E8E8] p-1"
               type="text"
+              placeholder="Digite o endereço do cliente/empresa"
               {...register("endereco", { required: true})}
             />
             <div className="flex mt-4">
@@ -180,7 +185,7 @@ export function CadastroClientesModal() {
             )}
             </div>
             <input
-              className="mt-1 border-[1.4px] rounded-sm  indent-5 bg-[#E8E8E8] p-1"
+              className="border-[1.4px] border-[#d0cfcf] bg-nome bg-no-repeat bg-[center_left_0.35rem] mt-1 rounded-sm  indent-5 bg-[#E8E8E8] p-1"
               type="text"
               placeholder="Digite sem o traço"
               {...register("cep", { required: true, minLength : 8 })}

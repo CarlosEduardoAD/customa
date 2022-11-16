@@ -17,18 +17,18 @@ export function LoginCardHelper() {
     formState: { errors },
   } = useForm<FormData>();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleLogin = (data: FormData) => {
-    console.log('Logado com sucesso')
-    let sessionPass = sessionStorage.getItem('senha')
-    console.log(sessionPass)
-    console.log(data.senha)
-    if (sessionPass != data.senha){
-      alert('Senha inválida, digite ela novamente')
-      navigate(0)
+    console.log("Logado com sucesso");
+    let sessionPass = sessionStorage.getItem("senha");
+    console.log(sessionPass);
+    console.log(data.senha);
+    if (sessionPass != data.senha) {
+      alert("Senha inválida, digite ela novamente");
+      navigate(0);
     }
-    navigate('/menu')
+    navigate("/menu");
   };
 
   return (
@@ -37,7 +37,7 @@ export function LoginCardHelper() {
         <div className="sm:p-20 p-16 sm:mx-0 bg-white rounded-lg shadow-xl shadow-violet-400 my-12">
           <p className="flex sm:-mt-16 -mt-8 font-raleway font-bold lg:text-3xl sm:text-xl text-lg text-start mb-1">
             <i>
-              <ArrowSquareOut className='mt-3' size={32} color={"#7F23F7"} />
+              <ArrowSquareOut className="mt-3" size={32} color={"#7F23F7"} />
             </i>
             <span className="ml-2 mt-3">Entrar</span>
           </p>
@@ -63,8 +63,9 @@ export function LoginCardHelper() {
           <div className="flex flex-col mt-4 font-raleway ">
             <label className="mt-4 font-semibold">E-mail</label>
             <input
-              className="bg-email bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8] indent-8 p-1"
+              className=" border-[#d0cfcf] bg-email bg-no-repeat bg-[center_left_0.35rem] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8] indent-8 p-1"
               type="email"
+              placeholder='Digite seu email'
               {...register("email", {
                 required: true,
                 pattern: /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i,
@@ -77,9 +78,10 @@ export function LoginCardHelper() {
             )}
             <label className="mt-4 font-semibold">Senha</label>
             <input
-              className="bg-nome bg-no-repeat bg-[center_left_0.58rem] border-[1.4px] rounded-sm bg-[#E8E8E8] indent-8 p-1"
+              className="border-[1.4px] border-[#d0cfcf] bg-nome bg-no-repeat bg-[center_left_0.58rem] rounded-sm bg-[#E8E8E8] indent-8 p-1"
               type={text ? "text" : "password"}
               {...register("senha", { required: true, minLength: 8 })}
+              placeholder='Digite sua senha'
             />
             {errors.senha && (
               <span>
@@ -100,8 +102,9 @@ export function LoginCardHelper() {
             </span>
             <label className="mt-2 font-semibold">Confirmação da senha</label>
             <input
-              className="mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8]"
+              className="indent-4 p-1 border-[#d0cfcf] mt-1 border-[1.4px] rounded-sm bg-[#E8E8E8]"
               type={text ? "text" : "password"}
+              placeholder='Digite sua senha novamente'
             />
             <span>
               <button
@@ -118,12 +121,12 @@ export function LoginCardHelper() {
           </div>
           <div className="flex flex-col sm:grid grid-cols-2 grid-flow-col gap-4">
             <div>
-              <p className="font-raleway sm:text-lg text-sm font-semibold p-2 border-2 bg-[#E8E8E8] text-center rounded-md">
+              <p className=" border-[#d0cfcf] font-raleway sm:text-lg text-sm font-semibold p-2 border-2 bg-[#E8E8E8] text-center rounded-md">
                 Entrar com Google
               </p>
             </div>
             <div>
-              <p className="font-raleway sm:text-lg text-sm font-semibold p-2 border-2 bg-[#E8E8E8] text-center rounded-md">
+              <p className=" border-[#d0cfcf] font-raleway sm:text-lg text-sm font-semibold p-2 border-2 bg-[#E8E8E8] text-center rounded-md">
                 Esqueceu sua senha ?
               </p>
             </div>
